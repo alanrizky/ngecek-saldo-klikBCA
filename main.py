@@ -24,8 +24,8 @@ def cek_saldo():
         driver = webdriver.Chrome("D:\\PENTING\\SOFTWARE\\Program mbuat sendiri\\chromedriver.exe",
                                   options=chrome_options)
         driver.get("https://ibank.klikbca.com/")
-        driver.find_element_by_name("value(user_id)").send_keys("ALANRIZK0408")
-        driver.find_element_by_name("value(pswd)").send_keys("759123")
+        driver.find_element_by_name("value(user_id)").send_keys("username")
+        driver.find_element_by_name("value(pswd)").send_keys("psswd")
         driver.find_element_by_name("value(Submit)").click()
         time.sleep(0.5)
         wait(driver, 11).until(EC.frame_to_be_available_and_switch_to_it((By.NAME, "menu")))
